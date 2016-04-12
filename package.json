@@ -1,0 +1,23 @@
+{
+  "name": "dummy-data-creater",
+  "version": "1.0.0",
+  "description": "create dummy data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExchangeWorld/dummy-data-creater.git"
+  },
+  "author": "ssarcandy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ExchangeWorld/dummy-data-creater/issues"
+  },
+  "homepage": "https://github.com/ExchangeWorld/dummy-data-creater#readme",
+  "dependencies": {
+    "dummy-json": "^1.0.1",
+    "sequelize": "^3.21.0"
+  }
+}
