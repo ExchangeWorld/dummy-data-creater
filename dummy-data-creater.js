@@ -8,7 +8,6 @@ const restaurantNum = 100;
 const dishNum       = 1000;
 const memberNum     = 200;
 
-console.log(templates.dish);
 for (let i = 0; i < restaurantNum; i++) {
     let result = dummyjson.parse(templates.restaurant);
     result = JSON.parse(result);
@@ -16,25 +15,7 @@ for (let i = 0; i < restaurantNum; i++) {
     models
         .Restaurant
         .create(result)
-        .then(()=> console.log(i))
-        .catch((err)=> {
-            console.error(err);
-            process.exit(1);
-        });
-}
-
-for (let i = 0; i < dishNum; i++) {
-    let result = dummyjson.parse(templates.dish);
-    result = JSON.parse(result);
-
-    models
-        .Dish
-        .create(result)
-        .then(()=> console.log(i))
-        .catch((err)=> {
-            console.error(err);
-            process.exit(1);
-        });
+        .then();
 }
 
 for (let i = 0; i < memberNum; i++) {
@@ -44,11 +25,16 @@ for (let i = 0; i < memberNum; i++) {
     models
         .Member
         .create(result)
-        .then(()=> console.log(i))
-        .catch((err)=> {
-            console.error(err);
-            process.exit(1);
-        });
+        .then();
 }
 
-process.exit(0);
+for (let i = 0; i < dishNum; i++) {
+    let result = dummyjson.parse(templates.dish);
+    result = JSON.parse(result);
+
+    models
+        .Dish
+        .create(result)
+        .then();
+}
+
